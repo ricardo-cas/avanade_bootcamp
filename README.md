@@ -1,4 +1,4 @@
 # avanade_bootcamp
 
-[ ] Html
-[ ] Angular Developer
+- [ ] Html
+- [ ] Angular Developer
