@@ -18,7 +18,7 @@ Objetivo deste repositório é armazenar os códigos do Bootcamp.
 ### Angular Developer 🚀
 
 - [ ] Objetivo:
-      75 dias, à partir da sua inscrição, para finalizar todas as atividades.
+      75 dias, para finalizar todas as atividades.
       Para isso, é necessário que você estude 2 horas por dia para concluir todo o treinamento online.
 
 ### HTML Web Developer! 🚀
