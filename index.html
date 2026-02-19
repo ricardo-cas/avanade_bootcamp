@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário do Otto - 1 Ano</title>
+    <!-- Tailwind CSS (Estilos prontos e modernos) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Nunito:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3 {
+            font-family: 'Fredoka', sans-serif;
+        }
+        
+        /* Animação suave de entrada */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efeito de onda no topo */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        @media (min-width: 768px) {
+            .wave-container svg { height: 120px; }
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased">
+
+    <!-- HERO SECTION (Topo) -->
+    <header class="relative bg-gradient-to-b from-blue-100 to-blue-200 pt-12 pb-24 px-4 text-center overflow-hidden">
+        <!-- Bolhas decorativas de fundo -->
+        <div class="absolute top-0 left-0 w-32 h-32 bg-yellow-200 rounded-full blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-20 right-0 w-40 h-40 bg-blue-300 rounded-full blur-3xl opacity-30 translate-x-1/3"></div>
+
+        <div class="relative z-10 flex flex-col items-center fade-in">
+            <!-- FOTO DO OTTO -->
+            <!-- 
+                 IMPORTANTE: Salve a foto no mesmo lugar deste arquivo com o nome "foto-otto.jpg".
+                 O código tenta carregar ela. Se não achar, carrega uma imagem genérica.
+            -->
+            <div class="relative mb-6 group">
+                <div class="absolute inset-0 bg-blue-400 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div class="w-48 h-48 md:w-56 md:h-56 rounded-full border-[6px] border-white shadow-xl overflow-hidden relative">
+                    <img 
+                        src="foto-otto.jpg" 
+                        alt="Otto" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60';"
+                    >
+                </div>
+                <!-- Balãozinho de idade -->
+                <div class="absolute -bottom-2 -right-2 bg-yellow-400 text-yellow-900 font-bold w-16 h-16 flex items-center justify-center rounded-full border-4 border-white shadow-lg rotate-12">
+                    1 Ano
+                </div>
+            </div>
+
+            <span class="bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 shadow-sm">
+                Convite Especial
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-800 mb-2">Otto</h1>
+            <p class="text-xl md:text-2xl text-slate-600">Venha comemorar meu primeiro aninho!</p>
+        </div>
+
+        <!-- Onda SVG -->
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- DETALHES -->
+    <main class="container mx-auto px-4 -mt-8 relative z-20 pb-12">
+        <div class="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
+            
+            <!-- Card Data -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-blue-400 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+                <div class="bg-blue-50 p-3 rounded-full text-blue-500">
+                    <i data-lucide="calendar-clock" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <!-- DATA E HORÁRIO ATUALIZADOS AQUI -->
+                    <h3 class="font-bold text-lg text-slate-800">01 de Março</h3>
+                    <p class="text-slate-500">Sábado, às 15:00h</p>
+                </div>
+            </div>
+
+            <!-- Card Local -->
+            <a href="https://maps.app.goo.gl/ruR5pJoUgbfPLerE8?g_st=ic" target="_blank" class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-yellow-400 flex items-center gap-4 hover:-translate-y-1 transition-transform cursor-pointer group">
+                <div class="bg-yellow-50 p-3 rounded-full text-yellow-500 group-hover:bg-yellow-100 transition-colors">
+                    <i data-lucide="map-pin" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800">Local da Festa</h3>
+                    <p class="text-slate-500 text-sm">R. Everton Ferreira Libório, 119 - Vila Martinho, Franco da Rocha - SP</p>
+                    <span class="text-blue-500 text-xs font-bold mt-1 inline-block">Ver no Mapa &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- FORMULÁRIO RSVP -->
+        <div class="max-w-md mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+            <div class="bg-slate-800 p-6 text-center text-white">
+                <div class="inline-block bg-green-500 p-2 rounded-full mb-2">
+                    <i data-lucide="check" class="w-6 h-6 text-white"></i>
+                </div>
+                <h2 class="text-2xl font-bold">Confirmação de Presença</h2>
+                <p class="text-slate-300 text-sm">Responda para organizarmos tudo com carinho!</p>
+            </div>
+
+            <form id="rsvpForm" class="p-8 space-y-6">
+                <!-- Nome -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700 uppercase tracking-wide">Nome dos Convidados</label>
+                    <input 
+                        type="text" 
+                        id="guestName"
+                        required
+                        class="w-full px-4 py-3 rounded-xl border-2 border-slate-100 focus:border-blue-500 focus:outline-none bg-slate-50 transition-colors"
+                        placeholder="Ex: Tio João, Maria e Pedro"
+                    >
+                </div>
+
+                <!-- Contadores -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Adultos -->
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                        <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Adultos</label>
+                        <div class="flex items-center justify-center gap-3">
+                            <button type="button" onclick="updateCount('adults', -1)" class="w-8 h-8 rounded-full bg-white shadow text-slate-600 hover:bg-slate-100 font-bold">-</button>
+                            <span id="adultsCount" class="text-xl font-bold text-slate-800 w-6">1</span>
+                            <button type="button" onclick="updateCount('adults', 1)" class="w-8 h-8 rounded-full bg-blue-500 shadow text-white hover:bg-blue-600 font-bold">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Crianças -->
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                        <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Crianças</label>
+                        <div class="flex items-center justify-center gap-3">
+                            <button type="button" onclick="updateCount('kids', -1)" class="w-8 h-8 rounded-full bg-white shadow text-slate-600 hover:bg-slate-100 font-bold">-</button>
+                            <span id="kidsCount" class="text-xl font-bold text-slate-800 w-6">0</span>
+                            <button type="button" onclick="updateCount('kids', 1)" class="w-8 h-8 rounded-full bg-blue-500 shadow text-white hover:bg-blue-600 font-bold">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão Enviar -->
+                <button 
+                    type="submit"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-200 hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                >
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Confirmar no WhatsApp
+                </button>
+                <p class="text-xs text-center text-slate-400">Você será redirecionado para o WhatsApp.</p>
+            </form>
+        </div>
+
+        <footer class="mt-16 text-center text-slate-400 text-sm">
+            <p>Feito com ❤️ para o 1º Aninho do Otto</p>
+        </footer>
+    </main>
+
+    <!-- JAVASCRIPT (Lógica) -->
+    <script>
+        // Inicializa os ícones
+        lucide.createIcons();
+
+        // Configurações
+        const whatsappNumber = "5511963618406"; // Seu número
+        let adults = 1;
+        let kids = 0;
+
+        // Função para atualizar contadores
+        function updateCount(type, change) {
+            if (type === 'adults') {
+                adults = Math.max(1, adults + change); // Mínimo 1 adulto
+                document.getElementById('adultsCount').innerText = adults;
+            } else {
+                kids = Math.max(0, kids + change); // Mínimo 0 crianças
+                document.getElementById('kidsCount').innerText = kids;
+            }
+        }
+
+        // Função de envio do formulário
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('guestName').value;
+            
+            if (!name) {
+                alert("Por favor, digite o nome dos convidados.");
+                return;
+            }
+
+            // Formata a mensagem
+            // %0A é quebra de linha no link do WhatsApp
+            const text = `Olá! Gostaria de confirmar presença no aniversário de 1 ano do Otto! 🎉%0A%0A` +
+                         `*Nome:* ${name}%0A` +
+                         `*Adultos:* ${adults}%0A` +
+                         `*Crianças:* ${kids}%0A%0A` +
+                         `Nos vemos lá!`;
+
+            // Redireciona
+            const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
